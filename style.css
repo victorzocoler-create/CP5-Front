@@ -1,0 +1,326 @@
+/* 
+   CP5 - SEÇÃO 4 (CARTAS) + SEÇÃO 5 (FOOTER)
+    */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #FBF6F3;
+  --blue: #6D86DD;
+  --btn-color: #7CAAC9;
+  --btn-hover: #5881AE;
+  --font-title: 'Press Start 2P', monospace;
+  --font-body: 'Noto Serif', serif;
+}
+
+/*
+   SEÇÃO 4 - CARTAS
+    */
+
+#cartas {
+  background: var(--white);
+  padding: 80px 60px;
+}
+
+#cartas h2 {
+  font-family: var(--font-title);
+  font-size: 2.6rem;
+  letter-spacing: -2px;
+  color: #1a1a2e;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+
+.cartas-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+
+.cartas-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+  border: 1.5px solid #aaa;
+  border-radius: 15px;
+  padding: 8px 14px;
+  font-size: 1.15rem;
+  font-family: var(--font-body);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--btn-color);
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding-right: 36px;
+}
+
+.select-wrapper::after {
+  content: '∨';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.btn-enviar {
+  margin-top: 28px;
+  background: var(--btn-color);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 30px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-enviar:hover {
+  background: var(--btn-hover);
+  transform: scale(1.03);
+}
+
+
+
+.card-preview {
+  flex: 0 0 360px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.pokemon-card {
+  position: relative;
+  width: 360px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.03) rotate(-1deg);
+}
+
+
+.card-img-base {
+  width: 100%;
+  display: block;
+}
+
+
+.card-overlay-name {
+  position: absolute;
+  top: 4%;
+  left: 6%;
+  font-family: var(--font-title);
+  font-size: 0.7rem;
+  color: #3a2000;
+  letter-spacing: 1px;
+  max-width: 55%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-overlay-hp {
+  position: absolute;
+  top: 4%;
+  right: 16%;
+  font-family: var(--font-title);
+  font-size: 0.7rem;
+  color: #3a2000;
+}
+
+.card-overlay-hp::before {
+  content: 'HP ';
+  font-size: 0.4rem;
+  color: #7a4800;
+}
+
+.card-overlay-tipo {
+  position: absolute;
+  top: 66%;
+  left: 6%;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #3a2000;
+}
+
+.card-overlay-ataque {
+  position: absolute;
+  top: 72%;
+  left: 6%;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #3a2000;
+}
+
+.card-overlay-ataque::before {
+  content: 'Ataque: ';
+  font-weight: 700;
+  color: #7a4800;
+}
+
+.card-overlay-resistencia {
+  position: absolute;
+  top: 79%;
+  left: 6%;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #3a2000;
+}
+
+.card-overlay-resistencia::before {
+  content: 'Resist.: ';
+  font-weight: 700;
+  color: #7a4800;
+}
+
+/* 
+   SEÇÃO 5 - FOOTER
+    */
+
+#footer {
+  background: var(--blue);
+}
+
+.footer-banner {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.footer-content {
+  padding: 50px 60px;
+}
+
+.footer-title {
+  font-family: var(--font-title);
+  font-size: 2.6rem;
+  letter-spacing: -2px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.footer-info {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-block p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+
+@media (max-width: 900px) {
+  #cartas {
+    padding: 60px 30px;
+  }
+
+  #cartas h2 {
+    font-size: 1.6rem;
+  }
+
+  .cartas-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    padding: 40px 30px;
+  }
+
+  .footer-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #cartas {
+    padding: 40px 18px;
+  }
+
+  #cartas h2 {
+    font-size: 1.1rem;
+  }
+
+  .card-preview {
+    width: 100%;
+  }
+
+  .footer-content {
+    padding: 30px 18px;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-info {
+    gap: 30px;
+  }
+}
