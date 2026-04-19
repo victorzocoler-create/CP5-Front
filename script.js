@@ -1,3 +1,54 @@
+// ==================== SEÇÃO 3 - FILTRO ====================
+const filtros = document.querySelectorAll('.pokemon-filters li');
+const pokemons = document.querySelectorAll('.pokemon-item');
+
+filtros.forEach(filtro => {
+  filtro.addEventListener('click', () => {
+    filtros.forEach(item => item.classList.remove('active'));
+    filtro.classList.add('active');
+
+    const tipo = filtro.getAttribute('data-filter');
+
+    pokemons.forEach(pokemon => {
+      const pokemonTipo = pokemon.getAttribute('data-type');
+
+      if (tipo === 'todos' || pokemonTipo === tipo) {
+        pokemon.style.display = 'flex';
+      } else {
+        pokemon.style.display = 'none';
+      }
+    });
+  });
+});
+
+// ==================== SEÇÃO 3 - MODAL ====================
+function abrirModal(nome, altura, peso, categoria, tipo, habilidade, fraqueza, evo1, evo2, evo3) {
+  document.getElementById('modalNome').textContent = nome;
+  document.getElementById('modalAltura').textContent = altura;
+  document.getElementById('modalPeso').textContent = peso;
+  document.getElementById('modalCategoria').textContent = categoria;
+  document.getElementById('modalTipo').textContent = tipo;
+  document.getElementById('modalHabilidade').textContent = habilidade;
+  document.getElementById('modalFraqueza').textContent = fraqueza;
+
+  document.getElementById('evo1').src = evo1;
+  document.getElementById('evo2').src = evo2;
+  document.getElementById('evo3').src = evo3;
+
+  document.getElementById('pokemonModal').classList.add('show');
+}
+
+function fecharModal() {
+  document.getElementById('pokemonModal').classList.remove('show');
+}
+
+window.addEventListener('click', function (event) {
+  const modal = document.getElementById('pokemonModal');
+  if (event.target === modal) {
+    fecharModal();
+  }
+});
+
 function atualizarCarta() {
   const nome = document.getElementById('nomeCarta').value;
   const vida = document.getElementById('vida').value;

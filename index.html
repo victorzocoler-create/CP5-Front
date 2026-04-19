@@ -10,7 +10,141 @@
 </head>
 <body>
 
-<!-- ==================== SEÇÃO 4 - CARTAS ==================== -->
+<!-- ==================== SEÇÃO 3 - POKEMONS ==================== -->
+<section id="pokemons">
+  <div class="pokemons-container">
+    <aside class="pokemon-sidebar">
+      <h2>Descubra os<br>Pokémons</h2>
+
+      <ul class="pokemon-filters">
+        <li class="active" data-filter="todos">Todos</li>
+        <li data-filter="agua">Água</li>
+        <li data-filter="fogo">Fogo</li>
+        <li data-filter="planta">Planta</li>
+        <li data-filter="eletrico">Elétrico</li>
+        <li data-filter="gelo">Gelo</li>
+      </ul>
+    </aside>
+
+    <div class="pokemon-grid">
+      <!-- linha 1 -->
+      <div class="pokemon-item" data-type="fogo"
+        onclick="abrirModal('Charmander','0.6 m','8.5 kg','Lizard','Fogo','Blaze','Água','images/charmander.png','images/charmeleon.png','images/charizard.png')">
+        <img src="images/charmander.png" alt="Charmander">
+      </div>
+
+      <div class="pokemon-item" data-type="planta"
+        onclick="abrirModal('Bulbasaur','0.7 m','6.9 kg','Seed','Planta','Overgrow','Fogo','images/bulbasaur.png','images/ivysaur.png','images/venusaur.png')">
+        <img src="images/bulbasaur.png" alt="Bulbasaur">
+      </div>
+
+      <div class="pokemon-item" data-type="eletrico"
+        onclick="abrirModal('Abra','0.9 m','19.5 kg','Psi','Elétrico','Synchronize','Inseto','images/abra.png','images/kadabra.png','images/alakazam.png')">
+        <img src="images/abra.png" alt="Abra">
+      </div>
+
+      <div class="pokemon-item" data-type="agua"
+        onclick="abrirModal('Squirtle','0.5 m','9.0 kg','Tiny Turtle','Água','Torrent','Elétrico','images/squirtle.png','images/wartortle.png','images/blastoise.png')">
+        <img src="images/squirtle.png" alt="Squirtle">
+      </div>
+
+      <!-- linha 2 -->
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Clefairy','0.6 m','7.5 kg','Fairy','Normal','Cute Charm','Aço','images/clefairy.png','images/clefable.png','images/clefable.png')">
+        <img src="images/clefairy.png" alt="Clefairy">
+      </div>
+
+      <div class="pokemon-item" data-type="fogo"
+        onclick="abrirModal('Growlithe','0.7 m','19.0 kg','Puppy','Fogo','Intimidate','Água','images/growlithe.png','images/arcanine.png','images/arcanine.png')">
+        <img src="images/growlithe.png" alt="Growlithe">
+      </div>
+
+      <div class="pokemon-item" data-type="agua"
+        onclick="abrirModal('Goldeen','0.6 m','15.0 kg','Goldfish','Água','Swift Swim','Elétrico','images/goldeen.png','images/seaking.png','images/seaking.png')">
+        <img src="images/goldeen.png" alt="Goldeen">
+      </div>
+
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Snorlax','2.1 m','460.0 kg','Sleeping','Normal','Immunity','Lutador','images/snorlax.png','images/snorlax.png','images/snorlax.png')">
+        <img src="images/snorlax.png" alt="Snorlax">
+      </div>
+
+      <!-- linha 3 -->
+      <div class="pokemon-item" data-type="planta"
+        onclick="abrirModal('Caterpie','0.3 m','2.9 kg','Worm','Planta','Shield Dust','Fogo','images/caterpie.png','images/metapod.png','images/butterfree.png')">
+        <img src="images/caterpie.png" alt="Caterpie">
+      </div>
+
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Jigglypuff','0.5 m','5.5 kg','Balloon','Normal','Cute Charm','Aço','images/jigglypuff.png','images/wigglytuff.png','images/wigglytuff.png')">
+        <img src="images/jigglypuff.png" alt="Jigglypuff">
+      </div>
+
+      <div class="pokemon-item" data-type="agua"
+        onclick="abrirModal('Lapras','2.5 m','220.0 kg','Transport','Água','Water Absorb','Elétrico','images/lapras.png','images/lapras.png','images/lapras.png')">
+        <img src="images/lapras.png" alt="Lapras">
+      </div>
+
+      <div class="pokemon-item" data-type="fogo"
+        onclick="abrirModal('Ponyta','1.0 m','30.0 kg','Fire Horse','Fogo','Run Away','Água','images/ponyta.png','images/rapidash.png','images/rapidash.png')">
+        <img src="images/ponyta.png" alt="Ponyta">
+      </div>
+
+      <!-- linha 4 -->
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Eevee','0.3 m','6.5 kg','Evolution','Normal','Run Away','Lutador','images/eevee.png','images/vaporeon.png','images/jolteon.png')">
+        <img src="images/eevee.png" alt="Eevee">
+      </div>
+
+      <div class="pokemon-item" data-type="agua"
+        onclick="abrirModal('Krabby','0.4 m','6.5 kg','River Crab','Água','Hyper Cutter','Elétrico','images/krabby.png','images/kingler.png','images/kingler.png')">
+        <img src="images/krabby.png" alt="Krabby">
+      </div>
+
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Pidgey','0.3 m','1.8 kg','Tiny Bird','Normal','Keen Eye','Elétrico','images/pidgey.png','images/pidgeotto.png','images/pidgeot.png')">
+        <img src="images/pidgey.png" alt="Pidgey">
+      </div>
+
+      <div class="pokemon-item" data-type="eletrico"
+        onclick="abrirModal('Pikachu','0.4 m','6.0 kg','Mouse','Elétrico','Static','Terra','images/pikachu.png','images/pichu.png','images/raichu.png')">
+        <img src="images/pikachu.png" alt="Pikachu">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="pokemon-modal" id="pokemonModal">
+  <div class="pokemon-modal-content">
+    <button class="modal-close" onclick="fecharModal()">X</button>
+
+    <h3 id="modalNome">Bulbasaur</h3>
+
+    <div class="modal-info">
+      <div class="modal-col">
+        <p><strong>Altura:</strong> <span id="modalAltura">0.7 m</span></p>
+        <p><strong>Categoria:</strong> <span id="modalCategoria">Seed</span></p>
+        <p><strong>Tipo:</strong> <span id="modalTipo">Planta</span></p>
+      </div>
+
+      <div class="modal-col">
+        <p><strong>Peso:</strong> <span id="modalPeso">6.9 kg</span></p>
+        <p><strong>Habilidades:</strong> <span id="modalHabilidade">Overgrow</span></p>
+        <p><strong>Fraqueza:</strong> <span id="modalFraqueza">Fogo</span></p>
+      </div>
+    </div>
+
+    <div class="modal-evolucoes">
+      <img id="evo1" src="images/bulbasaur.png" alt="Evolução 1">
+      <span>&gt;</span>
+      <img id="evo2" src="images/ivysaur.png" alt="Evolução 2">
+      <span>&gt;</span>
+      <img id="evo3" src="images/venusaur.png" alt="Evolução 3">
+    </div>
+  </div>
+</div>
+  <!-- ==================== SEÇÃO 4 - CARTAS ==================== -->
 <section id="cartas">
   <h2>Crie sua<br>própria carta<br>especial</h2>
 
