@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CP5 - Seções 4 e 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ==================== SEÇÃO 1 - inicio ==================== -->
+  <section id="section1" class="section1">
+        
+        
+    <div class="cabecalho">
+      <h1>cp3</h1>
+            
+      <nav>
+        <a href="#section1">Inicio</a>
+        <a href="#section2">Integrantes</a>
+        <a href="#pokemons">Pokemons</a>
+        <a href="#cartas">Cartas</a>
+      </nav>
+            
+    </div>
+
+    <div class="caixa">
+      
+      <div class="balao">
+        <h1>Checkpoint<br>Project</h1>
+        <img src="images/global/moldura.png">
+      </div>
+
+      <button onclick="irPara()">Start</button>
+
+    </div>
+    <img src="images/global/banner-full.png">
+        
+
+  </section>
+
+  <!-- ==================== SEÇÃO 2 - integrantes ==================== -->
+  <section id="section2" class="integrantes">
+    <div class="titulo">
+      <h1>Choose your character</h1>
+    </div>
+
+    <div class="box">
+      <img src="images/icons/seta-hover.png" class="seta">
+
+      <div class="item">Victor Zocoler - 568234</div>
+      <div class="item">Guilherme Pereira - 567487</div>
+      <div class="item">Eduardo Navarro - 568095</div>
+      <div class="item">Gustavo Firmino - 566903</div>
+    </div>
+  </section>
+
+<!-- ==================== SEÇÃO 3 - POKEMONS ==================== -->
+<section id="pokemons">
+  <div class="pokemons-container">
+    <aside class="pokemon-sidebar">
+      <h2>Descubra os<br>Pokémons</h2>
+
+      <ul class="pokemon-filters">
+        <li class="active" data-filter="todos">Todos</li>
+        <li data-filter="agua">Água</li>
+        <li data-filter="fogo">Fogo</li>
+        <li data-filter="planta">Planta</li>
+        <li data-filter="eletrico">Elétrico</li>
+        <li data-filter="gelo">Gelo</li>
+      </ul>
+    </aside>
+
+    <div class="pokemon-grid">
+      <!-- linha 1 -->
+      <div class="pokemon-item" data-type="fogo"
+        onclick="abrirModal('Charmander','0.6 m','8.5 kg','Lizard','Fogo','Blaze','Água','images/pokemons/charmander.png','images/pokemons/charmeleon.png','images/pokemons/charizard.png')">
+        <img src="images/pokemons/charmander.png" alt="Charmander">
+      </div>
+
+      <div class="pokemon-item" data-type="planta"
+        onclick="abrirModal('Bulbasaur','0.7 m','6.9 kg','Seed','Planta','Overgrow','Fogo','images/pokemons/bulbasaur.png','images/pokemons/ivysaur.png','images/pokemons/venusaur.png')">
+        <img src="images/pokemons/bulbasaur.png" alt="Bulbasaur">
+      </div>
+
+      <div class="pokemon-item" data-type="eletrico"
+        onclick="abrirModal('Abra','0.9 m','19.5 kg','Psi','Elétrico','Synchronize','Inseto','images/pokemons/abra.png','images/pokemons/kadabra.png','images/pokemons/alakazam.png')">
+        <img src="images/pokemons/abra.png" alt="Abra">
+      </div>
+
+      <div class="pokemon-item" data-type="agua"
+        onclick="abrirModal('Squirtle','0.5 m','9.0 kg','Tiny Turtle','Água','Torrent','Elétrico','images/pokemons/squirtle.png','images/pokemons/wartortle.png','images/pokemons/blastoise.png')">
+        <img src="images/pokemons/squirtle.png" alt="Squirtle">
+      </div>
+
+      <!-- linha 2 -->
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Clefairy','0.6 m','7.5 kg','Fairy','Normal','Cute Charm','Aço','images/pokemons/clefairy.png','images/pokemons/clefable.png','images/pokemons/clefable.png')">
+        <img src="images/pokemons/clefairy.png" alt="Clefairy">
+      </div>
+
+      <div class="pokemon-item" data-type="fogo"
+        onclick="abrirModal('Growlithe','0.7 m','19.0 kg','Puppy','Fogo','Intimidate','Água','images/pokemons/growlithe.png','images/pokemons/arcanine.png','images/pokemons/arcanine.png')">
+        <img src="images/pokemons/growlithe.png" alt="Growlithe">
+      </div>
+
+      <div class="pokemon-item" data-type="agua"
+        onclick="abrirModal('Goldeen','0.6 m','15.0 kg','Goldfish','Água','Swift Swim','Elétrico','images/pokemons/goldeen.png','images/pokemons/seaking.png','images/pokemons/seaking.png')">
+        <img src="images/pokemons/goldeen.png" alt="Goldeen">
+      </div>
+
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Snorlax','2.1 m','460.0 kg','Sleeping','Normal','Immunity','Lutador','images/pokemons/snorlax.png','images/pokemons/snorlax.png','images/pokemons/snorlax.png')">
+        <img src="images/pokemons/snorlax.png" alt="Snorlax">
+      </div>
+
+      <!-- linha 3 -->
+      <div class="pokemon-item" data-type="planta"
+        onclick="abrirModal('Caterpie','0.3 m','2.9 kg','Worm','Planta','Shield Dust','Fogo','images/pokemons/caterpie.png','images/pokemons/metapod.png','images/pokemons/butterfree.png')">
+        <img src="images/pokemons/caterpie.png" alt="Caterpie">
+      </div>
+
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Jigglypuff','0.5 m','5.5 kg','Balloon','Normal','Cute Charm','Aço','images/pokemons/jigglypuff.png','images/pokemons/wigglytuff.png','images/pokemons/wigglytuff.png')">
+        <img src="images/pokemons/jigglypuff.png" alt="Jigglypuff">
+      </div>
+
+      <div class="pokemon-item" data-type="agua"
+        onclick="abrirModal('Lapras','2.5 m','220.0 kg','Transport','Água','Water Absorb','Elétrico','images/pokemons/lapras.png','images/pokemons/lapras.png','images/pokemons/lapras.png')">
+        <img src="images/pokemons/lapras.png" alt="Lapras">
+      </div>
+
+      <div class="pokemon-item" data-type="fogo"
+        onclick="abrirModal('Ponyta','1.0 m','30.0 kg','Fire Horse','Fogo','Run Away','Água','images/pokemons/ponyta.png','images/pokemons/rapidash.png','images/pokemons/rapidash.png')">
+        <img src="images/pokemons/ponyta.png" alt="Ponyta">
+      </div>
+
+      <!-- linha 4 -->
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Eevee','0.3 m','6.5 kg','Evolution','Normal','Run Away','Lutador','images/pokemons/eevee.png','images/pokemons/vaporeon.png','images/pokemons/jolteon.png')">
+        <img src="images/pokemons/eevee.png" alt="Eevee">
+      </div>
+
+      <div class="pokemon-item" data-type="agua"
+        onclick="abrirModal('Krabby','0.4 m','6.5 kg','River Crab','Água','Hyper Cutter','Elétrico','images/pokemons/krabby.png','images/pokemons/kingler.png','images/pokemons/kingler.png')">
+        <img src="images/pokemons/krabby.png" alt="Krabby">
+      </div>
+
+      <div class="pokemon-item" data-type="normal"
+        onclick="abrirModal('Pidgey','0.3 m','1.8 kg','Tiny Bird','Normal','Keen Eye','Elétrico','images/pokemons/pidgey.png','images/pokemons/pidgeotto.png','images/pokemons/pidgeot.png')">
+        <img src="images/pokemons/pidgey.png" alt="Pidgey">
+      </div>
+
+      <div class="pokemon-item" data-type="eletrico"
+        onclick="abrirModal('Pikachu','0.4 m','6.0 kg','Mouse','Elétrico','Static','Terra','images/pokemons/pikachu.png','images/pokemons/pikachu.png','images/pokemons/raichu.png')">
+        <img src="images/pokemons/pikachu.png" alt="Pikachu">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="pokemon-modal" id="pokemonModal">
+  <div class="pokemon-modal-content">
+    <button class="modal-close" onclick="fecharModal()">X</button>
+
+    <h3 id="modalNome">Bulbasaur</h3>
+
+    <div class="modal-info">
+      <div class="modal-col">
+        <p><strong>Altura:</strong> <span id="modalAltura">0.7 m</span></p>
+        <p><strong>Categoria:</strong> <span id="modalCategoria">Seed</span></p>
+        <p><strong>Tipo:</strong> <span id="modalTipo">Planta</span></p>
+      </div>
+
+      <div class="modal-col">
+        <p><strong>Peso:</strong> <span id="modalPeso">6.9 kg</span></p>
+        <p><strong>Habilidades:</strong> <span id="modalHabilidade">Overgrow</span></p>
+        <p><strong>Fraqueza:</strong> <span id="modalFraqueza">Fogo</span></p>
+      </div>
+    </div>
+
+    <div class="modal-evolucoes">
+      <img id="evo1" src="images/pokemons/bulbasaur.png" alt="Evolução 1">
+      <span>&gt;</span>
+      <img id="evo2" src="images/pokemons/ivysaur.png" alt="Evolução 2">
+      <span>&gt;</span>
+      <img id="evo3" src="images/pokemons/venusaur.png" alt="Evolução 3">
+    </div>
+  </div>
+</div>
+  <!-- ==================== SEÇÃO 4 - CARTAS ==================== -->
+<section id="cartas">
+  <h2>Crie sua<br>própria carta<br>especial</h2>
+
+  <div class="cartas-container">
+
+    <!-- FORMULÁRIO -->
+    <div class="cartas-form">
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="nomeCarta">Nome da carta:</label>
+          <input type="text" id="nomeCarta" />
+        </div>
+
+        <div class="form-group">
+          <label for="vida">Quantidade de vida:</label>
+          <input type="number" id="vida" />
+        </div>
+
+        <div class="form-group">
+          <label for="pokemon">Pokemon:</label>
+          <div class="select-wrapper">
+            <select id="pokemon">
+              <option value="">Selecione o pokemon</option>
+              <option value="bulbasaur">Bulbasaur</option>
+              <option value="charmander">Charmander</option>
+              <option value="squirtle">Squirtle</option>
+              <option value="pikachu">Pikachu</option>
+              <option value="eevee">Eevee</option>
+              <option value="snorlax">Snorlax</option>
+              <option value="mewtwo">Mewtwo</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="ataque">Ataque:</label>
+          <input type="text" id="ataque" />
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoria:</label>
+          <div class="select-wrapper">
+            <select id="categoria">
+              <option value="">Selecione a categoria</option>
+              <option value="Água">Água</option>
+              <option value="Fogo">Fogo</option>
+              <option value="Planta">Planta</option>
+              <option value="Elétrico">Elétrico</option>
+              <option value="Gelo">Gelo</option>
+              <option value="Normal">Normal</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="resistencia">Resistência:</label>
+          <input type="text" id="resistencia" />
+        </div>
+
+      </div>
+
+      <button class="btn-enviar" onclick="atualizarCarta()">Enviar</button>
+    </div>
+
+   
+    <div class="card-preview">
+      <div class="pokemon-card" id="pokemonCard">
+        <img src="images/global/card.png" alt="Card Pokemon" class="card-img-base" />
+        <span class="card-overlay-name"  id="cardName">???</span>
+        <span class="card-overlay-hp"    id="cardHp">—</span>
+        <span class="card-overlay-tipo"  id="cardCategoria">Tipo: —</span>
+        <span class="card-overlay-ataque" id="cardAtaque">—</span>
+        <span class="card-overlay-resistencia" id="cardResistencia">—</span>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SEÇÃO 5 - FOOTER ==================== -->
+<footer id="footer">
+  <img src="images/global/footer-banner.jpg" alt="Banner Footer" class="footer-banner" />
+  <div class="footer-content">
+    <h2 class="footer-title">Explore e divirta-se</h2>
+    <div class="footer-info">
+      <div class="footer-block">
+        <p>1º ano - Engenharia de Software</p>
+        <p>FIAP - Paulista</p>
+        <p>São Paulo - SP</p>
+      </div>
+      <div class="footer-block">
+        <p>Telefone: (12) 3456-7890</p>
+        <p>E-mail: checkpoint@fiap.com.br</p>
+        <p>Redes sociais: @checkpoint</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
