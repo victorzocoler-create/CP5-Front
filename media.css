@@ -1,24 +1,35 @@
 @media (max-width: 430px) {
 
+  .cabecalho h1 {
+    margin: 0px;
+  }
+
   /* ===== SEÇÃO 1 ===== */
 .cabecalho {
+  width: 100%;
+  background-color: #fff;
+  border: 3px solid black;
+
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
 }
 
 .cabecalho nav {
-  margin-left: 0;
   display: flex;
-  justify-content: center; 
   flex-wrap: wrap;
-  gap: 15px;
+  justify-content: center;
+  gap: 20px;
   width: 100%;
+  margin: 0px !important;
 }
 
 .cabecalho nav a {
   text-align: center;
+  font-size: 1rem;
 }
 
   .caixa {
